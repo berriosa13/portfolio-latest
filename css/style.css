@@ -3,6 +3,7 @@
 body {
   font-family: "Maven Pro", sans-serif;
   padding-top: 70px;
+  min-height: calc(100vh - 50px);
 }
 
 .full-screen {
@@ -13,7 +14,6 @@ body {
   color: #5b5b5b;
   font-size: 14px;
   font-weight: bold;
-  padding: 8px 16px;
   border-radius: 50px;
   letter-spacing: 0.2px;
 }
@@ -518,9 +518,6 @@ b, strong {
             align-items: flex-start;
     max-height: 10vh;
   }
-  .copyright-text {
-    margin-top: 30rem;
-  }
 }
 
 @media (max-width: 320px) {
@@ -560,4 +557,7 @@ b, strong {
 .social-list-items {
   padding: 1.5rem;
 }
-/*# sourceMappingURL=style.css.map */
+
+footer {
+  height: 50px;
+}
