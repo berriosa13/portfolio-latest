@@ -812,9 +812,10 @@ img {
   // scroll to top arrow
 .arrow-wrapper {
 	position: fixed;
-	bottom: 16px;
+	bottom: 40px;
 	right:32px;
 	width:50px;
+	margin-right: 1rem;
 }
 
 .arrow-up {
