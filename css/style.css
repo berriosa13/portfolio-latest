@@ -341,7 +341,10 @@ b, strong {
 .contact-form .form-control:not(textarea) {
   height: 48px;
 }
-.contact-form .form-control:hover .contact-form .form-control:focus {
+.contact-form .form-control:focus {
+  border-color: #60E8CF;
+}
+.contact-form .form-control:hover {
   border-color: #60E8CF;
 }
 .contact-form .submit-btn:hover {

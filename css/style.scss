@@ -410,8 +410,10 @@ b, strong {
 		&:not(textarea) {
 			height: 48px;
 		}
-		&:hover
 		&:focus {
+			border-color: $main-color;
+		}
+		&:hover {
 			border-color: $main-color;
 		}
 	}
