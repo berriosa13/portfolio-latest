@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
   padding-top: 70px;
@@ -36,13 +40,13 @@ a:hover {
   color: #60E8CF;
 }
 
-.navbar-brand .uil {
-  font-size: 40px;
-  color: #60E8CF;
+.navbar-brand p {
+  color: #0A192F !important;
+  font-weight: 600 !important;
 }
 
-.programmer-image {
-  max-width: 2.5vw;
+.navbar-brand p:hover {
+  color: #60E8CF !important;
 }
 
 p {
@@ -286,6 +290,13 @@ b, strong {
 .dark-mode .navbar[class*=headroom--not-top] {
   background: #0A192F;
   border-bottom: 1px solid #0A192F;
+}
+.dark-mode .navbar-brand p {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+.dark-mode .navbar-brand p:hover {
+  color: #60E8CF !important;
 }
 .dark-mode .small-text {
   background: #0A192F;
@@ -727,6 +738,94 @@ p {
 
 .social-icons li:hover:nth-child(4) a:after {
   background: #e46880;
+}
+
+.arrow-wrapper {
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+}
+
+.arrow-up {
+  height: 40px;
+  width: 40px;
+  display: block;
+  border: 1px solid #60E8CF;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
+  overflow: hidden;
+}
+
+.arrow-slide {
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background: #60E8CF;
+  position: absolute;
+  display: block;
+  z-index: 0;
+}
+
+.left-arm {
+  position: absolute;
+  z-index: 1;
+  background-color: transparent;
+  top: 19px;
+  left: 3px;
+  width: 20px;
+  display: block;
+  transform: rotate(-45deg);
+}
+.left-arm:after {
+  content: "";
+  background-color: #60E8CF;
+  width: 20px;
+  height: 1px;
+  display: block;
+  border-radius: 1px;
+  transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
+  transform-origin: right center;
+  z-index: -1;
+}
+
+.right-arm {
+  position: absolute;
+  z-index: 1;
+  background-color: transparent;
+  top: 19px;
+  left: 17px;
+  width: 20px;
+  display: block;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+.right-arm:after {
+  content: "";
+  background-color: #60E8CF;
+  width: 20px;
+  height: 1px;
+  display: block;
+  border-radius: 1px;
+  transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
+  transform-origin: left center;
+  z-index: -1;
+}
+
+.arrow-up:hover {
+  transition: all 0.1s;
+}
+.arrow-up:hover .left-arm:after {
+  transform: rotate(-10deg);
+}
+.arrow-up:hover .right-arm:after {
+  transform: rotate(10deg);
+}
+.arrow-up:hover .arrow-slide {
+  transition: all 0.4s ease-in-out;
+  transform: translateY(200%);
 }
 
 @media (min-width: 1270px) {

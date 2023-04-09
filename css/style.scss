@@ -30,6 +30,10 @@ $link-font-size: 16px;
 	transition: all 0.4s ease;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: $font-base;
 	padding-top: 70px;
@@ -64,18 +68,16 @@ a {
 		color: $main-color;
 	}
 }
+  
 
-.navbar-brand {
-	.uil {
-		font-size: 40px;
-		color: $main-color;
-	}
+.navbar-brand p {
+	color: $dark-mode-color !important;
+	font-weight: 600 !important;
 }
 
-.programmer-image {
-	max-width: 2.5vw;
+.navbar-brand p:hover {
+	color: $main-color !important;
 }
-
 
 // TYPOGRAPHY
 p {
@@ -354,6 +356,14 @@ b, strong {
 			background: $dark-mode-color;
 			border-bottom: 1px solid $dark-mode-color;
 	    }
+	}
+	.navbar-brand p {
+		color: $text-white !important;
+		font-weight: 600 !important;
+	}
+	
+	.navbar-brand p:hover {
+		color: $main-color !important;
 	}
 	.small-text {
 		background: $dark-mode-color;
@@ -799,6 +809,95 @@ img {
 	background: #e46880;
   }
 
+  // scroll to top arrow
+.arrow-wrapper {
+	position: fixed;
+	bottom: 16px;
+	right:32px;
+	width:50px;
+}
+
+.arrow-up {
+	height: 40px;
+	width: 40px;
+	display: block;
+	border: 1px solid $main-color;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
+	overflow: hidden;
+  }
+  
+  .arrow-slide {
+	left: 0;
+	top: -100%;
+	width: 100%;
+	height: 100%;
+	background: $main-color;
+	position: absolute;
+	display: block;
+	z-index: 0;
+  }
+  
+  .left-arm {
+	position: absolute;
+	z-index: 1;
+	background-color: transparent;
+	top: 19px;
+	left: 3px;
+	width: 20px;
+	display: block;
+	transform: rotate(-45deg);
+	&:after {
+	  content: "";
+	  background-color: $main-color;
+	  width: 20px;
+	  height: 1px;
+	  display: block;
+	  border-radius: 1px;
+	  transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
+	  transform-origin: right center;
+	  z-index: -1;
+	}
+  }
+  
+  .right-arm {
+	position: absolute;
+	z-index: 1;
+	background-color: transparent;
+	top: 19px;
+	left: 17px;
+	width: 20px;
+	display: block;
+	transform: rotate(45deg);
+	border-radius: 2px;
+	&:after {
+	  content: "";
+	  background-color: $main-color;
+	  width: 20px;
+	  height: 1px;
+	  display: block;
+	  border-radius: 1px;
+	  transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
+	  transform-origin: left center;
+	  z-index: -1;
+	}
+  }
+  
+  .arrow-up:hover {
+	transition: all .1s;
+	.left-arm:after {
+	  transform: rotate(-10deg);
+	}
+	.right-arm:after {
+	  transform: rotate(10deg);
+	}
+	.arrow-slide {
+	  transition: all .4s ease-in-out;
+	  transform: translateY(200%);
+	}
+  }
+  
 
 // RESPONSIVE STYLES
 @media (min-width: 1270px) {
