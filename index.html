@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
   <!-- MAIN STYLE -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="/checkmark-dark.svg" sizes="32x32" type="image/svg+xml">
+  <link rel="icon" href="/checkmark-light.svg" sizes="32x32" type="image/svg+xml">
 
 </head>
 
@@ -43,11 +45,14 @@
             <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
           </li>
           <li class="nav-item">
+            <a href="#experience" class="nav-link"><span data-hover="Experience">Experience</span></a>
+          </li>
+          <li class="nav-item">
             <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
           </li>
           <!-- <li class="nav-item">
-                        <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
-                    </li> -->
+            <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
+          </li> -->
           <li class="nav-item">
             <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
           </li>
@@ -64,14 +69,13 @@
               </label>
             </div>
           </div>
-
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- ABOUT -->
-  <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+  <section class="about full-screen d-lg-flex justify-content-center align-items-center my-5" id="about">
     <div class="container the-top">
       <div class="row">
         <div class="col-lg-8 d-flex align-items-center m-auto">
@@ -82,12 +86,12 @@
             </h1>
             <h1 class="animated animated-text" style="margin-bottom: 15px;">
               <div class="animated-info">
-                <span class="animated-item">Software Developer</span>
-                <span class="animated-item">Web Developer</span>
+                <span class="animated-item">Full Stack Developer</span>
+                <span class="animated-item">Dedicated Professional</span>
                 <span class="animated-item">Tech Enthusiast</span>
               </div>
             </h1>
-            <h3>who enjoys learning and implementing new technologies🧑🏻‍💻</h3>
+            <h3>who enjoys learning and implementing new technologies</h3>
             <div class="mt-3">
               <a href="Resume/Anthony_Berrios_resume.pdf" target="_blank" class="btn mr-lg-2 custom-btn"><i
                   class='uil uil-file-alt'></i>Resume</a>
@@ -102,6 +106,55 @@
                     </div>
                 </div> -->
 
+      </div>
+    </div>
+  </section>
+
+  <section class="experience py-5 my-5" id="experience">
+    <div class="container">
+      <h2 class="text-center pb-5">Where I've worked🧑🏻‍💻</h2>
+      <div class="row">
+        <div class="col-4 px-5">
+          <div class="list-group list-group-flush px-3" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-cspire-list" data-toggle="list" href="#list-cspire" role="tab" aria-controls="cspire">C Spire</a>
+            <a class="list-group-item list-group-item-action" id="list-mpower-list" data-toggle="list" href="#list-mpower" role="tab" aria-controls="mpower">MPower Trading Systems</a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-cspire" role="tabpanel" aria-labelledby="list-cspire-list">
+              <h5 class="job-title">
+                Software Developer 
+                <a class="un-link" href="https://www.cspire.com/" target="_blank">@ C Spire</a>
+              </h5>
+              <p class="dates-worked">August 2022 - Present</p>
+              <div style="padding:20px;">
+                <ul class="job-tasks">
+                  <li class="task">Implemented custom logic using apex code to prevent reps from creating bad
+                    data and in turn reduced bad data related support tickets.</li>
+                  <li class="task">Assisted in a mass Salesforce data cleanup between multiple
+                    internal systems that significantly reduced total cloud data usage.</li>
+                  <li class="task">Maintained and enhanced existing in-house api endpoints across middleware layers that
+                    provided customer data to internal teams. </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="list-mpower" role="tabpanel" aria-labelledby="list-mpower-list">
+              <h5 class="job-title">
+                Systems Developer 
+                <a class="un-link" href="https://www.mpowertrading.com/" target="_blank">@ MPower Trading Systems</a>
+              </h5>
+              <p class="dates-worked">June 2021 - August 2022</p>
+              <div style="padding:20px;">
+                <ul class="job-tasks">
+                  <li class="task">Contributed in a large-scale integration that added a live brokerage firm to our flagship platform.</li>
+                  <li class="task">Implemented UI design changes in both the login screen and main panels to provide a better user experience.</li>
+                  <li class="task">Tested trading software for bugs and operating speed, fixing bugs and documenting processes to streamline developer workflow.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -186,7 +239,7 @@
               <div class="back">
                 <h3 class="synopsis">Description:</h3>
                 <p>Pokedex PWA app that allows a user to search a pokémon's name and displays information about that
-                  specific pokémon. Makes use of the <a href="https://pokeapi.co/">pokéAPI</a>.</p>
+                  specific pokémon. Makes use of the <a class="un-link" href="https://pokeapi.co/">pokéAPI</a>.</p>
                 <a href="https://pokedex-sepia-eta.vercel.app/" target="_blank">
                   <div class="btn"><i class="fa fa-play"></i>Live Demo</div>
                 </a>
@@ -278,8 +331,8 @@
         <div class="col-lg-12 col-12">
           <div class="contact-form">
             <h2 class="mb-4">Get in touch👇</h2>
-            <h4 class="mb-2">Although I'm not currently looking for new opportunies, my inbox is always open. Feel free
-              to reach out with any questions, or even just to say hi!</h4>
+            <h4 class="mb-2">My inbox is always open. Feel free
+              to reach out with any questions, or even just to say hi and I'll do my best to get back in a timely manner.</h4>
 
             <form method="POST" action="https://formspree.io/f/mayaqokz" class="contact-form">
               <div class="row">
@@ -359,7 +412,8 @@
 
   </footer>
 
-  <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/Headroom.js"></script>

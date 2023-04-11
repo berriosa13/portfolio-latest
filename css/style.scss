@@ -302,6 +302,68 @@ b, strong {
 	}
 }
 
+/* Override Bootstrap styles for list group */
+.list-group-item {
+	background-color: $text-white;
+	color: $main-color;
+	border: none;
+	font-weight: bold;
+  }
+  
+  .list-group-item:hover {
+	background-color: $main-color;
+	color: $text-white;
+  }
+  
+  .list-group-item.active {
+	background-color: $text-white; 
+	color: $main-color;
+	border-left: 5px solid $main-color; 
+    transition: border-color 0s ease-out 0.3s,
+  }
+
+  .job-title {
+	font-weight: 600;
+  }
+
+  .dates-worked {
+	color: $dark-mode-color;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 5px;
+  }
+
+  .un-link {
+	font-size: 18px;
+	display: inline-block;
+	color: $main-color;
+	padding-bottom:2px;
+	background-image: linear-gradient($main-color 0 0);
+	background-position: 0 100%; /*OR bottom left*/
+	background-size: 0% 2px;
+	background-repeat: no-repeat;
+	transition:
+	  background-size 0.3s,
+	  background-position 0s 0.3s; /*change after the size immediately*/
+  }
+  
+  .un-link:hover{
+	background-position: 100% 100%; /*OR bottom right*/
+	background-size: 100% 2px;
+  }
+  
+  .job-tasks li {
+	display: list-item;
+	list-style-image: url('/images/checkmark-dark.svg') !important;
+  }
+
+// 	p {
+// 	color: $dark-mode-color !important;
+//   }
+  .tasks {
+	color: $dark-mode-color !important;
+	line-height: 1.5;
+  }
 
 // COPYRIGHT TEXT
 .copyright-text {
@@ -394,8 +456,67 @@ b, strong {
 	.copyright-text {
 		color: #fff;
 	}
-}
 
+	.list-group-item {
+		background-color: $dark-mode-color;
+		color: $main-color;
+		border: none;
+		font-weight: bold;
+	  }
+	  
+	  .list-group-item:hover {
+		background-color: $main-color;
+		color: $text-white;
+	  }
+	  
+	  .list-group-item.active {
+		background-color: $dark-mode-color; 
+		color: $main-color;
+		border-left: 5px solid $main-color; 
+		transition: border-color 0s ease-out 0.3s,
+	  }
+	
+	  .dates-worked {
+		color: $text-white;
+		font-size: 14px;
+		font-weight: 600;
+		margin-top: 5px;
+	  }
+	
+	  .un-link {
+		font-size: 18px;
+		display: inline-block;
+		color: $main-color;
+		padding-bottom:2px;
+		background-image: linear-gradient($main-color 0 0);
+		background-position: 0 100%; /*OR bottom left*/
+		background-size: 0% 2px;
+		background-repeat: no-repeat;
+		transition:
+		  background-size 0.3s,
+		  background-position 0s 0.3s; /*change after the size immediately*/
+	  }
+	  
+	  .un-link:hover{
+		background-position: 100% 100%; /*OR bottom right*/
+		background-size: 100% 2px;
+	  }
+	  
+	  .job-tasks li {
+		display: list-item;
+		list-style-image: url('/images/checkmark-light.svg') !important;
+		color: $text-white;
+	  }
+
+	  .tasks {
+		color: $text-white !important;
+	  }
+
+		.navbar-toggler-icon {
+			background: $text-white;
+		}	
+	
+}
 // CONTACT FORM
 .contact-form {
 	border-color: $main-color;
@@ -536,12 +657,6 @@ img {
 	margin: 0 0 15px;
   }
   
-  p {
-	color: rgba(255, 255, 255, 0.85);
-	font-size: 19px;
-	line-height: 1.5;
-  }
-  
   .btn {
 	border: 1px solid $main-color;
 	border-radius: 5px;
@@ -567,6 +682,7 @@ img {
 	background: $main-color;
 	color: #fff;
   }
+
   .btn i {
 	margin: 0 5px 0;
   }
@@ -815,14 +931,14 @@ img {
 .arrow-wrapper {
 	position: fixed;
 	bottom: 40px;
-	right:32px;
-	width:50px;
+	right:40px;
+	width:40px;
 	margin-right: 1rem;
 }
 
 .arrow-up {
 	height: 40px;
-	width: 40px;
+	width: 42px;
 	display: block;
 	border: 1px solid $main-color;
 	position: relative;
