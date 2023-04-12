@@ -13,8 +13,6 @@ $font-weight-bold: bold;
 $font-weight-normal: normal;
 $font-weight-light: 300;
 
-$h1-font-color: #0A192F;
-$h2-font-color: #0A192F;
 $h3-font-color: #0A192F;
 $white-smoke: #f2f2f2;
 $dark-mode-color: #0A192F;
@@ -34,7 +32,8 @@ html {
 }
 
 body {
-	background-color: #F2F2F2;
+	background-color: $dark-mode-color;
+	color: $white-smoke;
 	font-family: $font-base;
 	padding-top: 70px;
 }
@@ -71,7 +70,7 @@ a {
   
 
 .navbar-brand p {
-	color: $dark-mode-color !important;
+	color: $white-smoke !important;
 	font-weight: 600 !important;
 }
 
@@ -84,28 +83,23 @@ p {
 	font-size: $body-font-size;
 	font-weight: $font-weight-light;
 	line-height: 1.5;
-	color: $dark-mode-color;
+	color: $white-smoke;
 }
 
 h1,h2,h3,h4,h5,h6 {
+	color: $white-smoke;
 	font-weight: $font-weight-bold;
 	letter-spacing: -1px;
 }
 
 h1 {
-	color: $h1-font-color;
 	font-size: $h1-font-size;
 	margin: 0;
 }
 
 h2 {
-	color: $h2-font-color;
 	font-size: $h2-font-size;
 	font-weight: $font-weight-bold;
-}
-
-h3 {
-	color: $h3-font-color;
 }
 
 h3,
@@ -182,9 +176,9 @@ b, strong {
       transform: translate(0, 0);
     }
     &[class*="headroom--not-top"] {
-    	background: $white-smoke;
-    	// box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
-    	border-bottom: 1px solid #f0f0f0;
+    	background: $dark-mode-color;
+    	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
+    	border-bottom: 1px solid $dark-mode-color;
     	padding-top: 0;
     	padding-bottom: 0;
     }
@@ -226,10 +220,10 @@ b, strong {
     }
 }
 
-.navbar-light {
+.navbar-dark {
 	.navbar-nav {
 		.nav-link{
-			color: $dark-mode-color;
+			color: $white-smoke;
 		}
 		.nav-link:focus,
 		.nav-link:hover {
@@ -244,7 +238,7 @@ b, strong {
 
 
 // HAMBURGER MENU
-.navbar-light {
+.navbar-dark {
 	.navbar-toggler-icon {
 		background: none;
 	}
@@ -278,7 +272,7 @@ b, strong {
 		}
 	}
 	.navbar-toggler-icon {
-		background: $h1-font-color;
+		background: $white-smoke;
 		display: block;
 		width: 100%;
 		height: 2px;
@@ -290,7 +284,7 @@ b, strong {
 
 /* Override Bootstrap styles for list group */
 .list-group-item {
-	background-color: $white-smoke;
+	background-color: $dark-mode-color;
 	color: $main-color;
 	border: none;
 	font-weight: bold;
@@ -298,11 +292,11 @@ b, strong {
   
   .list-group-item:hover {
 	background-color: $main-color;
-	color: $white-smoke;
+	color: $dark-mode-color;
   }
   
   .list-group-item.active {
-	background-color: $white-smoke; 
+	background-color: $dark-mode-color; 
 	color: $main-color;
 	border-left: 5px solid $main-color; 
     transition: border-color 0s ease-out 0.3s,
@@ -313,7 +307,7 @@ b, strong {
   }
 
   .dates-worked {
-	color: $dark-mode-color;
+	color: $white-smoke;
 	font-size: 14px;
 	font-weight: 600;
 	margin-top: 5px;
@@ -339,16 +333,13 @@ b, strong {
   }
   
   .job-tasks li {
-	color: $dark-mode-color;
+	color: $white-smoke;
 	display: list-item;
-	list-style-image: url('/images/checkmark-dark.svg') !important;
+	list-style-image: url('/images/checkmark-light.svg') !important;
   }
 
-// 	p {
-// 	color: $dark-mode-color !important;
-//   }
   .tasks {
-	color: $dark-mode-color !important;
+	color: $white-smoke!important;
 	line-height: 1.5;
   }
 
@@ -357,51 +348,70 @@ b, strong {
 	font-size: 16px;
 	font-weight: $font-weight-normal;
 	display: block;
-	color:#111;
+	color: $white-smoke;
 	// margin-top: 10rem;
 }
 
 // COLOR MODE
-.color-mode {
+.dark-mode {
 	font-weight: $font-weight-bold;
 	cursor: pointer;
 }
 
-.back p {
-	color: $dark-mode-color;
+.navbar-light .navbar-nav .nav-link {
+	color: $white-smoke;
+	&:hover {
+		color: $main-color;
+	}
 }
 
-.dark-mode {
+.navbar-collapse {
 	background: $dark-mode-color;
+}
+
+
+.light-mode {
+	background: $white-smoke;
 	.navbar-light .navbar-nav .nav-link {
-		color: rgba(255,255,255,0.8);
+		color: $dark-mode-color;
 		&:hover {
 			color: $main-color;
 		}
 	}
 	.navbar {
 		&[class*="headroom--not-top"] {
-			background: $dark-mode-color;
-			border-bottom: 1px solid $dark-mode-color;
+			background: $white-smoke;
+			border-bottom: 1px solid $white-smoke;
 	    }
 	}
+	.navbar-dark .navbar-nav .nav-link {
+		color: $dark-mode-color;
+		&:hover {
+			color: $main-color;
+		}
+	}
 	.navbar-brand p {
-		color: $white-smoke !important;
+		color: $dark-mode-color !important;
 		font-weight: 600 !important;
 	}
 	
 	.navbar-brand p:hover {
 		color: $main-color !important;
 	}
-	.small-text {
-		background: $dark-mode-color;
-		color: $white-smoke;
+
+	.navbar-toggler-icon {
+		background: $dark-mode-color !important;
 	}
+
+	.navbar-collapse {
+		background: $white-smoke;
+	}
+
 	.feature-card .uil,
 	.navbar-light .navbar-brand,
 	h1, h2, h3, h4, h5, h6,
 	.color-mode {
-		color: $white-smoke;
+		color: $dark-mode-color;
 	}
 	.owl-carousel {
 		.owl-nav button.owl-next,
@@ -411,20 +421,32 @@ b, strong {
 		}
 	}
 	.front, .back {
-		background-color: $dark-mode-color;
+		background-color: $white-smoke;
 	}
 	.back p {
-		color: $white-smoke;
+		color: $dark-mode-color;
 	}
 	.card {
 		border-color: $main-color;
 	}
+
+	.sub-title {
+		color: $dark-mode-color;
+	  }
+	  
+	  .title {
+		color: $dark-mode-color;
+	  }
+	  
+	  .synopsis {
+		color: $dark-mode-color;
+	  }
 	.copyright-text {
-		color: #fff;
+		color: $dark-mode-color;
 	}
 
 	.list-group-item {
-		background-color: $dark-mode-color;
+		background-color: $white-smoke;
 		color: $main-color;
 		border: none;
 		font-weight: bold;
@@ -436,14 +458,14 @@ b, strong {
 	  }
 	  
 	  .list-group-item.active {
-		background-color: $dark-mode-color; 
+		background-color: $white-smoke; 
 		color: $main-color;
 		border-left: 5px solid $main-color; 
 		transition: border-color 0s ease-out 0.3s,
 	  }
 	
 	  .dates-worked {
-		color: $white-smoke;
+		color: $dark-mode-color;
 		font-size: 14px;
 		font-weight: 600;
 		margin-top: 5px;
@@ -471,7 +493,7 @@ b, strong {
 	  .job-tasks li {
 		display: list-item;
 		list-style-image: url('/images/checkmark-light.svg') !important;
-		color: $white-smoke;
+		color: $dark-mode-color;
 	  }
 
 	  .tasks {
@@ -481,6 +503,15 @@ b, strong {
 		.navbar-toggler-icon {
 			background: $white-smoke;
 		}	
+
+		.contact-form {
+			border-color: $dark-mode-color;
+			position: relative;
+			.form-control {
+				color:$dark-mode-color;
+			}
+			
+		}
 	
 }
 // CONTACT FORM
@@ -488,6 +519,7 @@ b, strong {
 	border-color: $main-color;
 	position: relative;
 	.form-control {
+		color:$white-smoke;
 		background: transparent;
 		border-radius: 2px;
 		outline: none;
@@ -503,26 +535,18 @@ b, strong {
 		&:hover {
 			border-color: $main-color;
 		}
+		&:active {
+			border-color: $main-color;
+		}
+	}
+	.submit-btn{
+		color:$main-color !important;
 	}
 	 .submit-btn:hover {
 		background-color: $main-color;
+		color: $white-smoke !important;
 	 }
 }
-
-.contact-info {
-	background: $button-color;
-	border-radius: 0 0 3px 3px;
-	position: relative;
-	bottom: 8px;
-	p, a {
-		color: #f7f3f3;
-	}
-}
-
-.get-in-touch {
-	text-decoration: underline;
-}
-
 
 // SOCIAL LINKS
 .social-links {
@@ -549,7 +573,7 @@ img {
   }
   
   .front, .back {
-	background-color: $white-smoke;
+	background-color: $dark-mode-color;
 	backface-visibility: hidden;
 	position: absolute;
 	height: 100%;
@@ -597,7 +621,7 @@ img {
   }
   
   .sub-title {
-	color: #333741;
+	color: $white-smoke;
 	animation: slide-in 0.75s;
 	animation: slide-in 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
 	animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
@@ -607,7 +631,7 @@ img {
   }
   
   .title {
-	color: #333741;
+	color: $white-smoke;
 	animation: slide-in-slow 0.75s;
 	animation: slide-in-slow 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
 	animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
@@ -618,7 +642,7 @@ img {
   }
   
   .synopsis {
-	color: #333741;
+	color: $white-smoke;
 	font-size: 27px;
 	font-weight: 600;
 	margin: 0 0 15px;
@@ -1035,7 +1059,7 @@ img {
 	}
 
 	.navbar-collapse {
-		background: $white-smoke;
+		// background: $white-smoke;
 		text-align: center;
 		padding-bottom: 20px;
 	}
