@@ -14,9 +14,8 @@ $font-weight-normal: normal;
 $font-weight-light: 300;
 
 $h1-font-color: #0A192F;
-$h2-font-color: #353535;
-$h3-font-color: #484848;
-$body-font-color: #5b5b5b;
+$h2-font-color: #0A192F;
+$h3-font-color: #0A192F;
 $text-white: #ffffff;
 $dark-mode-color: #0A192F;
 $main-color: #60E8CF;
@@ -44,7 +43,7 @@ body {
 }
 
 .small-text {
-    color: $body-font-color;
+    // color: $body-font-color;
     font-size: $small-font-size;
     font-weight: $font-weight-bold;
     border-radius: 50px;
@@ -84,7 +83,7 @@ p {
 	font-size: $body-font-size;
 	font-weight: $font-weight-light;
 	line-height: 1.5;
-	color: $body-font-color;
+	color: $dark-mode-color;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -112,31 +111,6 @@ h3,
 b, strong {
 	font-weight: $font-weight-bold;
 }
-
-
-// CUSTOM BUTTON
-// .custom-btn {
-// 	color: $body-font-color;
-// 	font-weight: $font-weight-bold;
-//     border-radius: 50px;
-//     padding: 13px 29px;
-//     font-size: $small-font-size;
-//     line-height: normal;
-//     overflow: hidden;
-//     @include transition-effect;
-//     &:hover {
-//     	color: $main-color;
-//     }
-//     &.custom-btn-bg {
-//     	background: $button-color;
-// 		color: $text-white;
-// 		&:hover {
-// 	    	background: $main-color;
-// 	    	color: $text-white !important;
-// 	    }
-//     }
-// }
-
 
 // ANIMATED TEXT
 .animated {
@@ -191,6 +165,7 @@ b, strong {
 
 // MENU
 .navbar {
+	color: $dark-mode-color !important;
 	position: fixed;
     top: 0;
     right: 0;
@@ -213,6 +188,13 @@ b, strong {
     	padding-bottom: 0;
     }
 }
+
+// .navbar-nav li a {
+// 	color: $dark-mode-color !important;
+// }
+// .navbar-nav li a:hover {
+// 	color: $main-color !important;
+// }
 
 .navbar-brand {
 	font-weight: $font-weight-bold;
@@ -245,6 +227,9 @@ b, strong {
 
 .navbar-light {
 	.navbar-nav {
+		.nav-link{
+			color: $dark-mode-color;
+		}
 		.nav-link:focus,
 		.nav-link:hover {
 			color: $main-color;
@@ -353,6 +338,7 @@ b, strong {
   }
   
   .job-tasks li {
+	color: $dark-mode-color;
 	display: list-item;
 	list-style-image: url('/images/checkmark-dark.svg') !important;
   }
