@@ -6,6 +6,7 @@ html {
 }
 
 body {
+  background-color: #F2F2F2;
   font-family: "Quicksand", sans-serif;
   padding-top: 70px;
 }
@@ -164,7 +165,7 @@ b, strong {
   transform: translate(0, 0);
 }
 .navbar[class*=headroom--not-top] {
-  background: #ffffff;
+  background: #f2f2f2;
   border-bottom: 1px solid #f0f0f0;
   padding-top: 0;
   padding-bottom: 0;
@@ -248,7 +249,7 @@ b, strong {
 
 /* Override Bootstrap styles for list group */
 .list-group-item {
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   color: #60E8CF;
   border: none;
   font-weight: bold;
@@ -256,11 +257,11 @@ b, strong {
 
 .list-group-item:hover {
   background-color: #60E8CF;
-  color: #ffffff;
+  color: #f2f2f2;
 }
 
 .list-group-item.active {
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   color: #60E8CF;
   border-left: 5px solid #60E8CF;
   transition: border-color 0s ease-out 0.3s;
@@ -310,30 +311,11 @@ b, strong {
   font-weight: normal;
   display: block;
   color: #111;
-  margin-top: 10rem;
 }
 
 .color-mode {
   font-weight: bold;
   cursor: pointer;
-}
-
-.color-mode-icon {
-  position: relative;
-  right: 6px;
-}
-.color-mode-icon:after {
-  font-family: "Quicksand", sans-serif;
-  content: "\ea9f";
-  font-size: 30px;
-  font-weight: 300;
-  font-style: normal;
-}
-.color-mode-icon.active:after {
-  font-family: "Quicksand", sans-serif;
-  content: "\eb65";
-  font-size: 30px;
-  color: #60E8CF;
 }
 
 .back p {
@@ -354,7 +336,7 @@ b, strong {
   border-bottom: 1px solid #0A192F;
 }
 .dark-mode .navbar-brand p {
-  color: #ffffff !important;
+  color: #f2f2f2 !important;
   font-weight: 600 !important;
 }
 .dark-mode .navbar-brand p:hover {
@@ -362,24 +344,24 @@ b, strong {
 }
 .dark-mode .small-text {
   background: #0A192F;
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .dark-mode .feature-card .uil,
 .dark-mode .navbar-light .navbar-brand,
 .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6,
 .dark-mode .color-mode {
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .dark-mode .owl-carousel .owl-nav button.owl-next,
 .dark-mode .owl-carousel .owl-nav button.owl-prev,
 .dark-mode .owl-carousel button.owl-dot {
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .dark-mode .front, .dark-mode .back {
   background-color: #0A192F;
 }
 .dark-mode .back p {
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .dark-mode .card {
   border-color: #60E8CF;
@@ -395,7 +377,7 @@ b, strong {
 }
 .dark-mode .list-group-item:hover {
   background-color: #60E8CF;
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .dark-mode .list-group-item.active {
   background-color: #0A192F;
@@ -404,7 +386,7 @@ b, strong {
   transition: border-color 0s ease-out 0.3s;
 }
 .dark-mode .dates-worked {
-  color: #ffffff;
+  color: #f2f2f2;
   font-size: 14px;
   font-weight: 600;
   margin-top: 5px;
@@ -427,13 +409,13 @@ b, strong {
 .dark-mode .job-tasks li {
   display: list-item;
   list-style-image: url("/images/checkmark-light.svg") !important;
-  color: #ffffff;
+  color: #f2f2f2;
 }
 .dark-mode .tasks {
-  color: #ffffff !important;
+  color: #f2f2f2 !important;
 }
 .dark-mode .navbar-toggler-icon {
-  background: #ffffff;
+  background: #f2f2f2;
 }
 
 .contact-form {
@@ -497,6 +479,7 @@ img {
 }
 
 .front, .back {
+  background-color: #f2f2f2;
   backface-visibility: hidden;
   position: absolute;
   height: 100%;
@@ -511,7 +494,6 @@ img {
 
 .front {
   transform: rotateY(0deg);
-  background-color: white;
 }
 
 .back {
@@ -519,10 +501,11 @@ img {
   opacity: 0;
   padding-top: 60px;
   backface-visibility: visible;
-  background: white;
 }
 
 .card {
+  border: 3px solid #60E8CF;
+  border-radius: 5px;
   position: relative;
   width: 400px;
   height: 450px;
@@ -971,7 +954,7 @@ img {
     font-size: 28px;
   }
   .navbar-collapse {
-    background: #ffffff;
+    background: #f2f2f2;
     text-align: center;
     padding-bottom: 20px;
   }

@@ -27,9 +27,9 @@
 
   <!-- MENU -->
   <nav class="navbar navbar-expand-sm navbar-light">
-    <div class="container mt-3">
+    <div class="container">
       <a class="navbar-brand" href="index.html">
-        <p>Anthony Berrios</p>
+        <img class="img-fluid p-3" src="/images/aberrios-logo-spaced.png"/>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,9 +50,6 @@
           <li class="nav-item">
             <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
           </li>
-          <!-- <li class="nav-item">
-            <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
-          </li> -->
           <li class="nav-item">
             <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
           </li>
@@ -60,15 +57,15 @@
 
         <ul class="navbar-nav ml-lg-auto">
           <div class="ml-lg-4">
-            <div class="color-mode d-lg-flex justify-content-center align-items-center">
-              <input type="checkbox" class="checkbox" id="chk" />
-              <label class="label color-mode" for="chk">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <div class="ball"></div>
-              </label>
-            </div>
-          </div>
+                <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                  <input type="checkbox" class="checkbox" id="chk" />
+                  <label class="label color-mode" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                  </label>
+                </div>
+              </div>
         </ul>
       </div>
     </div>
@@ -396,11 +393,14 @@
     </div>
 
     <div class="" style="display: flex; align-items: center; justify-content: center;">
-      <p class="copyright-text text-center">
-        &copy; Copyright <span id="copyright">
-          <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-        </span> <strong>Anthony Berrios🤝</strong>All Rights Reserved
-      </p>
+      <div class="flex-direction: column text-center" style="margin-top: 10rem;">
+        <p class="copyright-text text-center">
+          <img class="img-fluid mb-2" style="margin: 0 auto;" src="/images/aberrios-logo-spaced.png"/>
+          &copy; Copyright <span id="copyright">
+            <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+          </span> <strong>Anthony Berrios🤝</strong>All Rights Reserved
+        </p>
+      </div>
     </div>
     <div class="arrow-wrapper" style="margin-left: auto;">
       <a href="#" class="arrow-up">
