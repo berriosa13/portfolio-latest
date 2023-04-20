@@ -116,7 +116,6 @@ b, strong {
 .animated-item:nth-child(3n+3) {
   animation-delay: 4s;
 }
-
 @keyframes BottomTotop {
   0% {
     opacity: 0;
@@ -623,7 +622,6 @@ img {
   font-weight: 600;
   margin: 0;
 }
-
 @keyframes slide-in {
   0% {
     transform: translate3d(-300px, 0, 0);

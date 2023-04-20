@@ -138,13 +138,26 @@ b, strong {
     top: 0;
     right: 0;
     left: 0;
-    animation: BottomTotop 6s linear infinite 0s;
+    -webkit-animation: BottomTotop 6s linear infinite 0s;
+            animation: BottomTotop 6s linear infinite 0s;
     &:nth-child(2n+2) {
-        animation-delay: 2s;
+        -webkit-animation-delay: 2s;
+                animation-delay: 2s;
     }
     &:nth-child(3n+3) {
-        animation-delay: 4s;
+        -webkit-animation-delay: 4s;
+                animation-delay: 4s;
     }
+}
+
+@-webkit-keyframes BottomTotop {
+    0% { opacity: 0; }
+    5% { opacity: 0; transform: translateY(5px); }
+    10% { opacity: 1; transform: translateY(0px); }
+    25% { opacity: 1; transform: translateY(0px); }
+    30% { opacity: 0; transform: translateY(5px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
 }
 
 @keyframes BottomTotop {
@@ -299,7 +312,7 @@ b, strong {
 	background-color: $dark-mode-color; 
 	color: $main-color;
 	border-left: 5px solid $main-color; 
-    transition: border-color 0s ease-out 0.3s,
+    transition: border-color 0s ease-out 0.3s
   }
 
   .job-title {
@@ -461,7 +474,7 @@ b, strong {
 		background-color: $white-smoke; 
 		color: $main-color;
 		border-left: 5px solid $main-color; 
-		transition: border-color 0s ease-out 0.3s,
+		transition: border-color 0s ease-out 0.3s
 	  }
 	
 	  .dates-worked {
@@ -574,7 +587,8 @@ img {
   
   .front, .back {
 	background-color: $dark-mode-color;
-	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -594,7 +608,8 @@ img {
 	transform: rotateY(180deg);
 	opacity: 0;
 	padding-top: 60px;
-	backface-visibility: visible;
+	-webkit-backface-visibility: visible;
+	        backface-visibility: visible;
   }
   
   .card {
@@ -622,9 +637,12 @@ img {
   
   .sub-title {
 	color: $white-smoke;
-	animation: slide-in 0.75s;
-	animation: slide-in 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
-	animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+	-webkit-animation: slide-in 0.75s;
+	        animation: slide-in 0.75s;
+	-webkit-animation: slide-in 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+	        animation: slide-in 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+	-webkit-animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+	        animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
 	font-size: 18px;
 	font-weight: 200;
 	margin: 0 0 5px 0;
@@ -632,9 +650,12 @@ img {
   
   .title {
 	color: $white-smoke;
-	animation: slide-in-slow 0.75s;
-	animation: slide-in-slow 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
-	animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+	-webkit-animation: slide-in-slow 0.75s;
+	        animation: slide-in-slow 0.75s;
+	-webkit-animation: slide-in-slow 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+	        animation: slide-in-slow 0.75s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+	-webkit-animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+	        animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
 	font-size: 30px;
 	font-weight: 600;
 	margin: 0;
@@ -682,16 +703,39 @@ img {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	animation: slide-in-right 1.25s;
-	animation: slide-in-right 1.25s cubic-bezier(0.625, 0.075, 0.11, 1.165);
-	animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+	-webkit-animation: slide-in-right 1.25s;
+	        animation: slide-in-right 1.25s;
+	-webkit-animation: slide-in-right 1.25s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+	        animation: slide-in-right 1.25s cubic-bezier(0.625, 0.075, 0.11, 1.165);
+	-webkit-animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
+	        animation-timing-function: cubic-bezier(0.625, 0.075, 0.11, 1.165);
 	font-size: 35px;
 	font-weight: 600;
 	margin: 0;
   }
   
+  @-webkit-keyframes slide-in {
+	0% {
+	  transform: translate3d(-300px, 0, 0);
+	}
+	100% {
+	  transform: translate3d(0, 0, 0);
+	}
+  }
+  
   @keyframes slide-in {
 	0% {
+	  transform: translate3d(-300px, 0, 0);
+	}
+	100% {
+	  transform: translate3d(0, 0, 0);
+	}
+  }
+  @-webkit-keyframes slide-in-slow {
+	0% {
+	  transform: translate3d(-300px, 0, 0);
+	}
+	20% {
 	  transform: translate3d(-300px, 0, 0);
 	}
 	100% {
@@ -707,6 +751,22 @@ img {
 	}
 	100% {
 	  transform: translate3d(0, 0, 0);
+	}
+  }
+  @-webkit-keyframes slide-in-right {
+	0% {
+	  transform: translate3d(400px, 0, 0);
+	}
+	30% {
+	  transform: translate3d(400px, 0, 0);
+	  opacity: 0;
+	}
+	40% {
+	  opacity: 0;
+	}
+	100% {
+	  transform: translate3d(0, 0, 0);
+	  opacity: 1;
 	}
   }
   @keyframes slide-in-right {
