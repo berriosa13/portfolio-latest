@@ -96,9 +96,6 @@ b, strong {
 
 .animated-item {
   color: #60E8CF;
-}
-
-.animated-item {
   font-size: 40px;
   line-height: inherit;
   display: block;
@@ -108,41 +105,21 @@ b, strong {
   top: 0;
   right: 0;
   left: 0;
-  animation: BottomTotop 6s linear infinite 0s;
+  animation: BottomTotop 8s linear infinite;
 }
-.animated-item:nth-child(2n+2) {
-  animation-delay: 2s;
+
+.animated-item {
+  --animation-delay: calc(var(--index) * 2s);
+  animation-delay: var(--animation-delay);
 }
-.animated-item:nth-child(3n+3) {
-  animation-delay: 4s;
-}
+
+/* Define keyframes for BottomTotop animation */
 @keyframes BottomTotop {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 0;
-    transform: translateY(5px);
-  }
-  10% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  25% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  30% {
-    opacity: 0;
-    transform: translateY(5px);
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  0%, 25% { opacity: 0; transform: translateY(20px); }
+  30%, 50% { opacity: 1; transform: translateY(0); }
+  55%, 100% { opacity: 0; transform: translateY(-20px); }
 }
+
 .navbar {
   color: #0A192F !important;
   position: fixed;
