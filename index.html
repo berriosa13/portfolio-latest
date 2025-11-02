@@ -1,494 +1,1088 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Anthony Berrios - Full Stack Developer and Certified Salesforce Platform Developer. Explore my portfolio showcasing web development projects, technical expertise, and professional experience."
+    />
+    <meta name="author" content="Anthony Berrios" />
+    <meta
+      name="keywords"
+      content="Full Stack Developer, Salesforce Developer, Web Development, Lightning Web Components, React, Next.js, Portfolio, Anthony Berrios"
+    />
+    <meta name="theme-color" content="#0A192F" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Anthony Berrios' Portfolio">
-  <meta name="author" content="Anthony Berrios">
+    <title>Anthony Berrios - Full Stack Developer Portfolio</title>
 
-  <title>Anthony Berrios - Portfolio</title>
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://anthonyberrios.com/" />
+    <meta
+      property="og:title"
+      content="Anthony Berrios - Full Stack Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Full Stack Developer and Certified Salesforce Platform Developer specializing in Lightning Web Components, React, and modern web technologies."
+    />
+    <meta
+      property="og:image"
+      content="https://anthonyberrios.com/images/aberrios-logo-spaced.png"
+    />
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/unicons.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
-  <!-- MAIN STYLE -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="/checkmark-dark.svg" sizes="32x32" type="image/svg+xml">
-  <link rel="icon" href="/checkmark-light.svg" sizes="32x32" type="image/svg+xml">
-</head>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://anthonyberrios.com/" />
+    <meta
+      property="twitter:title"
+      content="Anthony Berrios - Full Stack Developer Portfolio"
+    />
+    <meta
+      property="twitter:description"
+      content="Full Stack Developer and Certified Salesforce Platform Developer specializing in Lightning Web Components, React, and modern web technologies."
+    />
+    <meta
+      property="twitter:image"
+      content="https://anthonyberrios.com/images/aberrios-logo-spaced.png"
+    />
 
-<body>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://anthonyberrios.com/" />
 
-  <!-- MENU -->
-  <nav class="navbar sticky-top navbar-expand-sm navbar-dark" style="z-index: 10;">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img class="img-fluid p-3" src="/images/aberrios-logo-spaced.png" />
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        <span class="navbar-toggler-icon"></span>
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://assets.calendly.com" />
 
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="#experience" class="nav-link"><span data-hover="Experience">Experience</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
-          </li>
-        </ul>
+    <!-- Google Fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    />
 
-        <ul class="navbar-nav ml-lg-auto">
-          <div class="ml-lg-4">
-            <div class="dark-mode d-lg-flex justify-content-center align-items-center">
-              <input checked type="checkbox" class="checkbox" id="chk" />
-              <label class="label dark-mode" for="chk">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <div class="ball"></div>
-              </label>
-            </div>
-          </div>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/unicons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <!-- ABOUT -->
-  <section class="about full-screen d-lg-flex justify-content-center align-items-center my-5" id="about">
-    <div class="container the-top">
-      <div class="row">
-        <div class="col-lg-8 d-flex align-items-center m-auto">
-          <div class="about-text">
-            <h4>Welcome! 👋</h4>
-            <h1 style="font-size: 50px;">
-              <span class="mr-2">I'm Anthony</span>
-            </h1>
-            <h1 class="animated animated-text" style="margin-bottom: 15px;">
-              <div class="animated-info">
-                <span class="animated-item" style="--index: 1;">Full Stack Developer</span>
-                <span class="animated-item" style="--index: 2;">Certified Salesforce Platform Developer</span>
-                <span class="animated-item" style="--index: 3;">Dedicated Professional</span>
-                <span class="animated-item" style="--index: 4;">Tech Enthusiast</span>
+    <!-- Calendly Widget -->
+    <link
+      rel="stylesheet"
+      href="https://assets.calendly.com/assets/external/widget.css"
+    />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anthony Berrios",
+        "url": "https://anthonyberrios.com",
+        "image": "https://anthonyberrios.com/images/aberrios-logo-spaced.png",
+        "jobTitle": "Full Stack Developer",
+        "description": "Full Stack Developer and Certified Salesforce Platform Developer",
+        "knowsAbout": [
+          "JavaScript",
+          "React",
+          "Next.js",
+          "Salesforce",
+          "Lightning Web Components",
+          "Apex",
+          "Java",
+          "Web Development",
+          "Full Stack Development"
+        ],
+        "sameAs": [
+          "https://github.com/berriosa13",
+          "https://www.linkedin.com/in/anthony-berrios-b72148192/",
+          "https://www.salesforce.com/trailblazer/berriosa",
+          "https://www.instagram.com/ac_berrios/"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "C Spire"
+        },
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "Investview Inc."
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#about" class="skip-link">Skip to main content</a>
+
+    <!-- MENU -->
+    <nav class="navbar sticky-top navbar-expand-sm navbar-dark">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="index.html"
+          aria-label="Anthony Berrios Home"
+        >
+          <img
+            class="img-fluid p-3"
+            src="/images/aberrios-logo-spaced.png"
+            alt="Anthony Berrios Logo"
+            width="200"
+            height="60"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a href="#about" class="nav-link"
+                ><span data-hover="About">About</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#experience" class="nav-link"
+                ><span data-hover="Experience">Experience</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#project" class="nav-link"
+                ><span data-hover="Projects">Projects</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link"
+                ><span data-hover="Contact">Contact</span></a
+              >
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item ml-lg-4">
+              <div
+                class="dark-mode-toggle d-lg-flex justify-content-center align-items-center"
+              >
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  id="chk"
+                  checked
+                  aria-label="Toggle dark mode"
+                />
+                <label
+                  class="label dark-mode"
+                  for="chk"
+                  aria-label="Toggle between light and dark mode"
+                >
+                  <i class="fas fa-moon" aria-hidden="true"></i>
+                  <i class="fas fa-sun" aria-hidden="true"></i>
+                  <div class="ball"></div>
+                </label>
               </div>
-            </h1>
-            <h3>who enjoys learning and implementing new technologies</h3>
-            <div class="mt-3">
-              <a href="Resume/Anthony-Berrios-Resume.pdf" target="_blank" class="btn mr-lg-2 custom-btn"><i
-                  class='uil uil-file-alt'></i>Resume</a>
-              <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Get in Touch</a>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <section class="experience py-5 my-5" id="experience">
-    <div class="container">
-      <h2 class="text-center pb-5">Where I've worked🧑🏻‍💻</h2>
-      <div class="row">
-        <div class="col-4 px-5">
-          <div class="list-group list-group-flush px-3" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active" id="list-cspire-list" data-toggle="list"
-              href="#list-cspire" role="tab" aria-controls="cspire">C Spire</a>
-            <a class="list-group-item list-group-item-action" id="list-mpower-list" data-toggle="list"
-              href="#list-mpower" role="tab" aria-controls="mpower">Investview</a>
-          </div>
-        </div>
-        <div class="col-8">
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="list-cspire" role="tabpanel" aria-labelledby="list-cspire-list">
-              <h5 class="job-title">
-                Software Developer
-                <a class="un-link" href="https://www.cspire.com/" target="_blank">@ C Spire</a>
-              </h5>
-              <p class="dates-worked">August 2022 - Present</p>
-              <div style="padding:20px;">
-                <ul class="job-tasks">
-                  <li class="task">
-                    Developed and maintained user interfaces using Lightning
-                    Web Components (LWC), Visualforce pages, and Aura
-                    components, creating dynamic and responsive experiences
-                    that align with business requirements and Salesforce best
-                    practices.
-                  </li>
-                  <li class="task">
-                    Designed, implemented, and tested solutions using
-                    Salesforce's declarative tools, including workflows, process
-                    builders, flows, and validation rules, to automate business
-                    processes and enhance user experience.
-                  </li>
-                  <li class="task">
-                    Created and managed integrations with external systems,
-                    including the development of callouts to external web
-                    services using Apex, ensuring secure and reliable data
-                    exchange.
-                  </li>
-                  <li class="task">
-                    Pioneered the development of Apex solutions within Salesforce environments, crafting
-                    tailored logic to elegantly address intricate business requirements and elevate operational
-                    effectiveness.</li>
-                  <li class="task">
-                    Created, maintained, and enhanced Java Spring Swagger API middleware endpoints that passed data from
-                    one system to another.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="list-mpower" role="tabpanel" aria-labelledby="list-mpower-list">
-              <h5 class="job-title">
-                Systems Developer
-                <a class="un-link" href="https://investview.com/" target="_blank">@ Investview Inc.</a>
-              </h5>
-              <p class="dates-worked">June 2021 - August 2022</p>
-              <div style="padding:20px;">
-                <ul class="job-tasks">
-                  <li class="task">Collaborated in the successful integration of a live brokerage firm into our flagship
-                    platform on a large scale.</li>
-                  <li class="task">Implemented user interface design enhancements in the login screen and main panels to
-                    optimize user experience.</li>
-                  <li class="task">Conducted comprehensive testing of trading software for identification and resolution
-                    of bugs, and documented streamlined developer workflow processes.</li>
-                  <li class="task">Performed daily health checks of production environments, servers, microservices, and
-                    client applications to ensure 100% system stability before market opening.</li>
-                  <li class="task">Revamped the software's installer using install4j9, resulting in a 15% increase in
-                    total user downloads.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="project py-5" id="project">
-    <div class="container">
-      <h2 style="text-align:center; margin-bottom: 3rem;">Projects I've been working on</h2>
-      <div class="row project-container justify-content-around">
-        <!-- GuidePop Project -->
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="card-container">
-            <div class="card">
-              <div class="front">
-                <h3 class="title">GuidePop</h3>
-                <h4 class="sub-title mb-3">Technologies Used:</h4>
-                <ul class="tech-stack d-flex justify-content-start align-items-center my-3">
-                  <li class="d-inline mx-3">
-                    <img src="images/project/tech-stack-icons/icons8-google-firebase-console-48.png" alt="Firebase"
-                      width="48" height="48" />
-                  </li>
-                  <li class="d-inline mx-3">
-                    <img src="images/project/tech-stack-icons/Svelte_Logo.png" alt="Svelte" width="48" height="48" />
-                  </li>
-                  <li class="d-inline mx-3">
-                    <img src="images/project/tech-stack-icons/mapbox.png" alt="Mapbox" width="48" height="48" />
-                  </li>
-                </ul>
-                <img class="image" src="images/project/GuidePop-full-logo.png" alt="GuidePop Logo" />
-              </div>
-              <div class="back">
-                <h4 class="synopsis">Description:</h4>
-                <p>GuidePop is a digital guidebooks SAAS platform for short term rental hosts and property managers to
-                  easily create and share guidebooks containing details like check-in/check-out instructions, Wi-Fi
-                  credentials, local restaurant recommendations, and much more...</p>
-                <a href="https://guidepop.info/" target="_blank" rel="noopener noreferrer">
-                  <div class="btn"><i class="fa fa-play" aria-hidden="true"></i> Live Site</div>
-                </a>
-                <a href="https://github.com/GuidePop/GuidePop" target="_blank" rel="noopener noreferrer">
-                  <div class="btn secondary"><i class="fas fa-code" aria-hidden="true"></i> Source Code</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mx-1">
-          <div class="card-container">
-            <div class="card">
-              <div class="front">
-                <h1 class="title">
-                  Guardian Automobile Sales
+    <!-- ABOUT -->
+    <main>
+      <section
+        class="about full-screen d-lg-flex justify-content-center align-items-center my-5"
+        id="about"
+      >
+        <div class="container the-top">
+          <div class="row">
+            <div class="col-lg-8 d-flex align-items-center m-auto">
+              <div class="about-text">
+                <p class="greeting" aria-label="Welcome, waving hand">
+                  <span aria-hidden="true">👋</span> Welcome!
+                </p>
+                <h1 class="name-heading">
+                  <span class="mr-2">I'm Anthony</span>
                 </h1>
-                <h2 class="sub-title mb-3">
-                  Technologies Used:
+                <div class="animated animated-text">
+                  <div class="animated-info">
+                    <span class="animated-item animated-item-1"
+                      >Full Stack Developer</span
+                    >
+                    <span class="animated-item animated-item-2"
+                      >Certified Salesforce Platform Developer</span
+                    >
+                    <span class="animated-item animated-item-3"
+                      >Dedicated Professional</span
+                    >
+                    <span class="animated-item animated-item-4"
+                      >Tech Enthusiast</span
+                    >
+                  </div>
+                </div>
+                <h2 class="tagline">
+                  who enjoys learning and implementing new technologies
                 </h2>
-                <ul class="d-flex justify-content-start align-items-center my-3">
-                  <li class="d-inline mx-3">
-                    <img src="images/project//tech-stack-icons/react-spinner.gif" style="height: 48px; width: 48px;" />
-                  </li>
-                  <li class="d-inline mx-3">
-                    <img src="images/project//tech-stack-icons/icons8-google-firebase-console-48.png"
-                      style="height: 48px; width: 48px;" />
-                  </li>
-                  <li class="d-inline mx-3">
-                    <img src="images/project//tech-stack-icons/icons8-next.js-48.png"
-                      style="height: 48px; width: 48px;" />
-                  </li>
-                  <li class="d-inline mx-3">
-                    <img src="images/project//tech-stack-icons/vercel.svg" style="height: 48px; width: 48px;" />
-                  </li>
-                </ul>
-                <img class="image" src="images/project/GAS-Full-Logo-2-Color.png" alt="gas image"
-                  style="padding: 1rem; margin-bottom: 100px;" />
-              </div>
-              <div class="back">
-                <h3 class="synopsis">Description:</h3>
-                <p>Used Car Dealership PWA with customized built in CRUD that allows a user to create and manipulate car
-                  listings that are displayed on the site.</p>
-                <a href="https://www.gasautomobilesales.com/" target="_blank">
-                  <div class="btn"><i class="fa fa-play"></i>Live Demo</div>
-                </a>
-                <a href="https://github.com/berriosa13/gas_website" target="_blank">
-                  <div class="btn secondary"><i class="fas fa-code "></i>Source Code</div>
-                </a>
+                <div class="cta-buttons mt-3">
+                  <a
+                    href="Resume/Anthony-Berrios-Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn mr-lg-2 custom-btn"
+                    aria-label="Download Resume PDF"
+                  >
+                    <i class="uil uil-file-alt" aria-hidden="true"></i> Resume
+                  </a>
+                  <a
+                    href="#contact"
+                    class="btn custom-btn custom-btn-bg custom-btn-link"
+                    >Get in Touch</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card-container">
-            <div class="card">
-              <div class="front">
-                <h1 class="title">
-                  Pokédex App
-                </h1>
-                <h2 class="sub-title">Technologies Used:</h2>
-                <ul class="d-flex justify-content-start align-items-center my-3">
-                  <li class="d-inline mx-2">
-                    <img src="images/project//tech-stack-icons/icons8-html-5-48.png"
-                      style="height: 48px; width: 48px;" />
-                  </li>
-                  <li class="d-inline mx-2">
-                    <img src="images/project//tech-stack-icons/icons8-css3-48.png" style="height: 48px; width: 48px;" />
-                  </li>
-                  <li class="d-inline mx-2">
-                    <img src="images/project//tech-stack-icons/vercel.svg" style="height: 48px; width: 48px;" />
-                  </li>
-                  <li class="d-inline mx-2">
-                    <img src="images/project//tech-stack-icons/react-spinner.gif" style="height: 48px; width: 48px;" />
-                  </li>
-                  <li class="d-inline mx-2">
-                    <img src="images/project//tech-stack-icons/icons8-next.js-48.png"
-                      style="height: 48px; width: 48px;" />
-                  </li>
-                </ul>
-                <img class="image" src="images/project/pokedex-removebg-preview.png" alt="pokdex-image" />
+      </section>
+
+      <section class="experience py-5 my-5" id="experience">
+        <div class="container">
+          <h2
+            class="text-center pb-5"
+            aria-label="Where I've worked, technologist emoji"
+          >
+            <span aria-hidden="true">🧑🏻‍💻</span> Where I've worked
+          </h2>
+          <div class="row">
+            <div class="col-4 px-5">
+              <div
+                class="list-group list-group-flush px-3"
+                id="list-tab"
+                role="tablist"
+                aria-label="Company tabs"
+              >
+                <button
+                  class="list-group-item list-group-item-action active"
+                  id="list-ergon-list"
+                  data-toggle="list"
+                  data-target="#list-ergon"
+                  role="tab"
+                  aria-controls="ergon"
+                  aria-selected="true"
+                >
+                  Ergon
+                </button>
+                <button
+                  class="list-group-item list-group-item-action"
+                  id="list-cspire-list"
+                  data-toggle="list"
+                  data-target="#list-cspire"
+                  role="tab"
+                  aria-controls="cspire"
+                  aria-selected="false"
+                >
+                  C Spire
+                </button>
+                <button
+                  class="list-group-item list-group-item-action"
+                  id="list-mpower-list"
+                  data-toggle="list"
+                  data-target="#list-mpower"
+                  role="tab"
+                  aria-controls="mpower"
+                  aria-selected="false"
+                >
+                  Investview
+                </button>
               </div>
-              <div class="back">
-                <h3 class="synopsis">Description:</h3>
-                <p>Pokedex PWA app that allows a user to search a pokémon's name and displays information about that
-                  specific pokémon. Makes use of the <a class="un-link" href="https://pokeapi.co/">pokéAPI</a>.</p>
-                <a href="https://pokedex-sepia-eta.vercel.app/" target="_blank">
-                  <div class="btn"><i class="fa fa-play"></i>Live Demo</div>
-                </a>
-                <a href="https://github.com/berriosa13/pokedex-remake" target="_blank">
-                  <div class="btn secondary"><i class="fas fa-code "></i>Source Code</div>
-                </a>
+            </div>
+            <div class="col-8">
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="list-ergon"
+                  role="tabpanel"
+                  aria-labelledby="list-ergon-list"
+                >
+                  <h3 class="job-title">
+                    Senior Salesforce Developer
+                    <a
+                      class="un-link"
+                      href="https://www.ergon.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >@ Ergon</a
+                    >
+                  </h3>
+                  <p class="dates-worked">October 2024 - Present</p>
+                  <div class="job-description">
+                    <ul class="job-tasks">
+                      <li class="task">
+                        Played a major role in the creation of a new greenfield
+                        Salesforce org from the ground up.
+                      </li>
+                      <li class="task">
+                        Built a fully fledged CI/CD pipeline for Salesforce
+                        using Gearset & GitHub Enterprise Cloud.
+                      </li>
+                      <li class="task">
+                        Developed and refined developer workflows, including
+                        Jira projects, CI/CD pipelines, and version control.
+                      </li>
+                      <li class="task">
+                        Reviewed code for all project work submitted by internal
+                        developers and consultants.
+                      </li>
+                      <li class="task">
+                        Conducted training/working sessions with junior
+                        developers on all things Salesforce.
+                      </li>
+                      <li class="task">
+                        Built out a custom Trigger handler framework,
+                        TestDataFactory, and Utility class to better organize
+                        apex implementation & test code.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="list-cspire"
+                  role="tabpanel"
+                  aria-labelledby="list-cspire-list"
+                >
+                  <h3 class="job-title">
+                    Software Developer II
+                    <a
+                      class="un-link"
+                      href="https://www.cspire.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >@ C Spire</a
+                    >
+                  </h3>
+                  <p class="dates-worked">August 2022 - December 2023</p>
+                  <div class="job-description">
+                    <ul class="job-tasks">
+                      <li class="task">
+                        Developed and maintained user interfaces using Lightning
+                        Web Components (LWC), Visualforce pages, and Aura
+                        components, creating dynamic and responsive experiences
+                        that align with business requirements and Salesforce
+                        best practices.
+                      </li>
+                      <li class="task">
+                        Designed, implemented, and tested solutions using
+                        Salesforce's declarative tools, including workflows,
+                        process builders, flows, and validation rules, to
+                        automate business processes and enhance user experience.
+                      </li>
+                      <li class="task">
+                        Created and managed integrations with external systems,
+                        including the development of callouts to external web
+                        services using Apex, ensuring secure and reliable data
+                        exchange.
+                      </li>
+                      <li class="task">
+                        Pioneered the development of Apex solutions within
+                        Salesforce environments, crafting tailored logic to
+                        elegantly address intricate business requirements and
+                        elevate operational effectiveness.
+                      </li>
+                      <li class="task">
+                        Created, maintained, and enhanced Java Spring Swagger
+                        API middleware endpoints that passed data from one
+                        system to another.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="list-mpower"
+                  role="tabpanel"
+                  aria-labelledby="list-mpower-list"
+                >
+                  <h3 class="job-title">
+                    Systems Developer
+                    <a
+                      class="un-link"
+                      href="https://investview.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >@ Investview Inc.</a
+                    >
+                  </h3>
+                  <p class="dates-worked">June 2021 - August 2022</p>
+                  <div class="job-description">
+                    <ul class="job-tasks">
+                      <li class="task">
+                        Collaborated in the successful integration of a live
+                        brokerage firm into our flagship platform on a large
+                        scale.
+                      </li>
+                      <li class="task">
+                        Implemented user interface design enhancements in the
+                        login screen and main panels to optimize user
+                        experience.
+                      </li>
+                      <li class="task">
+                        Conducted comprehensive testing of trading software for
+                        identification and resolution of bugs, and documented
+                        streamlined developer workflow processes.
+                      </li>
+                      <li class="task">
+                        Performed daily health checks of production
+                        environments, servers, microservices, and client
+                        applications to ensure 100% system stability before
+                        market opening.
+                      </li>
+                      <li class="task">
+                        Revamped the software's installer using install4j9,
+                        resulting in a 15% increase in total user downloads.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="col-md-4">
-          <div class="card-container">
-            <div class="card">
-              <div class="front">
-                <h1 class="title">
-                  Landing Page: got Pizza?
-                </h1>
-                <h2 class="sub-title">Technologies Used:</h2>
-                <ul class="d-flex justify-content-start align-items-center my-3">
-                  <li class="d-inline mx-3">
-                    <img src="images/project//tech-stack-icons/icons8-html-5-48.png"
-                      style="height: 48px; width: 48px;" />
-                  </li>
-                  <li class="d-inline mx-3">
-                    <img src="images/project//tech-stack-icons/icons8-css3-48.png" style="height: 48px; width: 48px;" />
-                  </li>
-                </ul>
-                <img class="image" src="images/project/pizzaLogo-removebg-preview.png" alt=""
-                  style="margin-bottom: 100px" />
+      <!-- PROJECTS -->
+      <section class="project py-5" id="project">
+        <div class="container">
+          <h2 class="project-heading">Projects I've been working on</h2>
+          <div class="row project-container justify-content-around">
+            <!-- GuidePop Project -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card-container">
+                <div
+                  class="card"
+                  tabindex="0"
+                  role="article"
+                  aria-label="GuidePop project"
+                >
+                  <div class="front">
+                    <h3 class="title">GuidePop</h3>
+                    <h4 class="sub-title mb-3">Technologies Used:</h4>
+                    <ul
+                      class="tech-stack d-flex justify-content-start align-items-center my-3"
+                    >
+                      <li class="d-inline mx-3">
+                        <img
+                          src="images/project/tech-stack-icons/icons8-google-firebase-console-48.png"
+                          alt="Firebase"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="d-inline mx-3">
+                        <img
+                          src="images/project/tech-stack-icons/Svelte_Logo.png"
+                          alt="Svelte"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="d-inline mx-3">
+                        <img
+                          src="images/project/tech-stack-icons/mapbox.png"
+                          alt="Mapbox"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                    </ul>
+                    <img
+                      class="image"
+                      src="images/project/GuidePop-full-logo.png"
+                      alt="GuidePop Logo"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="back">
+                    <h4 class="synopsis">Description:</h4>
+                    <p>
+                      GuidePop is a digital guidebooks SAAS platform for short
+                      term rental hosts and property managers to easily create
+                      and share guidebooks containing details like
+                      check-in/check-out instructions, Wi-Fi credentials, local
+                      restaurant recommendations, and much more...
+                    </p>
+                    <a
+                      href="https://guidepop.info/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn"
+                      aria-label="View GuidePop live site"
+                    >
+                      <i class="fa fa-play" aria-hidden="true"></i> Live Site
+                    </a>
+                    <a
+                      href="https://github.com/GuidePop/GuidePop"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn secondary"
+                      aria-label="View GuidePop source code on GitHub"
+                    >
+                      <i class="fas fa-code" aria-hidden="true"></i> Source Code
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="back">
-                <h3 class="synopsis">Description:</h3>
-                <p>Landing page for a pizza startup company. Inspired by Starbucks Coffee.</p>
-                <a href="https://berriosa13.github.io/gotPizza/" target="_blank">
-                  <div class="btn"><i class="fa fa-play"></i>Live Demo</div>
-                </a>
-                <a href="https://github.com/berriosa13/gotPizza" target="_blank">
-                  <div class="btn secondary"><i class="fas fa-code "></i>Source Code</div>
-                </a>
+            </div>
+            <!-- Guardian Automobile Sales Project -->
+            <div class="col-md-4 mx-1">
+              <div class="card-container">
+                <div
+                  class="card"
+                  tabindex="0"
+                  role="article"
+                  aria-label="Guardian Automobile Sales project"
+                >
+                  <div class="front">
+                    <h3 class="title">Guardian Automobile Sales</h3>
+                    <h4 class="sub-title mb-3">Technologies Used:</h4>
+                    <ul
+                      class="d-flex justify-content-start align-items-center my-3"
+                    >
+                      <li class="d-inline mx-3">
+                        <img
+                          src="images/project/tech-stack-icons/react-spinner.gif"
+                          alt="React"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="d-inline mx-3">
+                        <img
+                          src="images/project/tech-stack-icons/icons8-google-firebase-console-48.png"
+                          alt="Firebase"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="d-inline mx-3">
+                        <img
+                          src="images/project/tech-stack-icons/icons8-next.js-48.png"
+                          alt="Next.js"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="d-inline mx-3">
+                        <img
+                          src="images/project/tech-stack-icons/vercel.svg"
+                          alt="Vercel"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                    </ul>
+                    <img
+                      class="image image-padded"
+                      src="images/project/GAS-Full-Logo-2-Color.png"
+                      alt="Guardian Automobile Sales logo"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="back">
+                    <h4 class="synopsis">Description:</h4>
+                    <p>
+                      Used Car Dealership PWA with customized built in CRUD that
+                      allows a user to create and manipulate car listings that
+                      are displayed on the site.
+                    </p>
+                    <a
+                      href="https://www.gasautomobilesales.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn"
+                      aria-label="View Guardian Automobile Sales live demo"
+                    >
+                      <i class="fa fa-play" aria-hidden="true"></i> Live Demo
+                    </a>
+                    <a
+                      href="https://github.com/berriosa13/gas_website"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn secondary"
+                      aria-label="View Guardian Automobile Sales source code on GitHub"
+                    >
+                      <i class="fas fa-code" aria-hidden="true"></i> Source Code
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Pokédex App Project -->
+            <div class="col-md-4">
+              <div class="card-container">
+                <div
+                  class="card"
+                  tabindex="0"
+                  role="article"
+                  aria-label="Pokédex App project"
+                >
+                  <div class="front">
+                    <h3 class="title">Pokédex App</h3>
+                    <h4 class="sub-title">Technologies Used:</h4>
+                    <ul
+                      class="d-flex justify-content-start align-items-center my-3"
+                    >
+                      <li class="d-inline mx-2">
+                        <img
+                          src="images/project/tech-stack-icons/icons8-html-5-48.png"
+                          alt="HTML5"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="d-inline mx-2">
+                        <img
+                          src="images/project/tech-stack-icons/icons8-css3-48.png"
+                          alt="CSS3"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="d-inline mx-2">
+                        <img
+                          src="images/project/tech-stack-icons/vercel.svg"
+                          alt="Vercel"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="d-inline mx-2">
+                        <img
+                          src="images/project/tech-stack-icons/react-spinner.gif"
+                          alt="React"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="d-inline mx-2">
+                        <img
+                          src="images/project/tech-stack-icons/icons8-next.js-48.png"
+                          alt="Next.js"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                    </ul>
+                    <img
+                      class="image"
+                      src="images/project/pokedex-removebg-preview.png"
+                      alt="Pokédex App"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="back">
+                    <h4 class="synopsis">Description:</h4>
+                    <p>
+                      Pokedex PWA app that allows a user to search a pokémon's
+                      name and displays information about that specific pokémon.
+                      Makes use of the
+                      <a
+                        class="un-link"
+                        href="https://pokeapi.co/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >pokéAPI</a
+                      >.
+                    </p>
+                    <a
+                      href="https://pokedex-sepia-eta.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn"
+                      aria-label="View Pokédex App live demo"
+                    >
+                      <i class="fa fa-play" aria-hidden="true"></i> Live Demo
+                    </a>
+                    <a
+                      href="https://github.com/berriosa13/pokedex-remake"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn secondary"
+                      aria-label="View Pokédex App source code on GitHub"
+                    >
+                      <i class="fas fa-code" aria-hidden="true"></i> Source Code
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pizza Landing Page Project -->
+            <div class="col-md-4">
+              <div class="card-container">
+                <div
+                  class="card"
+                  tabindex="0"
+                  role="article"
+                  aria-label="Got Pizza landing page project"
+                >
+                  <div class="front">
+                    <h3 class="title">Landing Page: got Pizza?</h3>
+                    <h4 class="sub-title">Technologies Used:</h4>
+                    <ul
+                      class="d-flex justify-content-start align-items-center my-3"
+                    >
+                      <li class="d-inline mx-3">
+                        <img
+                          src="images/project/tech-stack-icons/icons8-html-5-48.png"
+                          alt="HTML5"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="d-inline mx-3">
+                        <img
+                          src="images/project/tech-stack-icons/icons8-css3-48.png"
+                          alt="CSS3"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                    </ul>
+                    <img
+                      class="image image-padded"
+                      src="images/project/pizzaLogo-removebg-preview.png"
+                      alt="Got Pizza logo"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="back">
+                    <h4 class="synopsis">Description:</h4>
+                    <p>
+                      Landing page for a pizza startup company. Inspired by
+                      Starbucks Coffee.
+                    </p>
+                    <a
+                      href="https://berriosa13.github.io/gotPizza/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn"
+                      aria-label="View Got Pizza live demo"
+                    >
+                      <i class="fa fa-play" aria-hidden="true"></i> Live Demo
+                    </a>
+                    <a
+                      href="https://github.com/berriosa13/gotPizza"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn secondary"
+                      aria-label="View Got Pizza source code on GitHub"
+                    >
+                      <i class="fas fa-code" aria-hidden="true"></i> Source Code
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- COVID-19 Tracker App Project -->
+            <div class="col-md-4">
+              <div class="card-container">
+                <div
+                  class="card"
+                  tabindex="0"
+                  role="article"
+                  aria-label="COVID-19 Tracker App project"
+                >
+                  <div class="front">
+                    <h3 class="title">Covid-19 Tracker App</h3>
+                    <h4 class="sub-title">
+                      Technologies Used: Covid Api, Chart.js
+                    </h4>
+                    <ul
+                      class="d-flex justify-content-center align-items-center my-2"
+                    >
+                      <li class="d-inline mx-3">
+                        <img
+                          src="images/project/tech-stack-icons/icons8-material-ui-48.png"
+                          alt="Material UI"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                      <li class="d-inline mx-3">
+                        <img
+                          src="images/project/tech-stack-icons/react-spinner.gif"
+                          alt="React"
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                        />
+                      </li>
+                    </ul>
+                    <img
+                      class="image image-padded-small"
+                      src="images/project/covid-removebg-preview.png"
+                      alt="COVID-19 Tracker"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="back">
+                    <h4 class="synopsis">Description:</h4>
+                    <p>
+                      Coronavirus tracking app that fetches real world
+                      statistics for number of infections, recoveries, and
+                      deaths. Displays the data in visual charts and filters by
+                      country.
+                    </p>
+                    <a
+                      href="https://berriosa13.github.io/coronavirusTracker/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn"
+                      aria-label="View COVID-19 Tracker live demo"
+                    >
+                      <i class="fa fa-play" aria-hidden="true"></i> Live Demo
+                    </a>
+                    <a
+                      href="https://github.com/berriosa13/coronavirusTracker"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn secondary"
+                      aria-label="View COVID-19 Tracker source code on GitHub"
+                    >
+                      <i class="fas fa-code" aria-hidden="true"></i> Source Code
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="col-md-4">
-          <div class="card-container">
-            <div class="card">
-              <div class="front">
-                <h1 class="title">
-                  Covid-19 Tracker App
-                </h1>
-                <h2 class="sub-title">Technologies Used: Covid Api, Chart.js </h2>
-                <ul class="d-flex justify-content-center align-items-center my-2">
-                  <li class="d-inline mx-3">
-                    <img src="images/project//tech-stack-icons/icons8-material-ui-48.png"
-                      style="height: 48px; width: 48px;" />
-                  </li>
-                  <li class="d-inline mx-3">
-                    <img src="images/project//tech-stack-icons/react-spinner.gif" style="height: 48px; width: 48px;" />
-                  </li>
-                </ul>
-                <img class="image" src="images/project/covid-removebg-preview.png" alt="" style="padding: 1rem;" />
-              </div>
-              <div class="back">
-                <h3 class="synopsis">Description:</h3>
-                <p>Coronavirus tracking app that fetches real world statistics for number of infections, recoveries, and
-                  deaths. Displays the data in visual charts and filters by country. </p>
-                <a href="https://berriosa13.github.io/coronavirusTracker/" target="_blank">
-                  <div class="btn"><i class="fa fa-play"></i>Live Demo</div>
-                </a>
-                <a href="https://github.com/berriosa13/coronavirusTracker" target="_blank">
-                  <div class="btn secondary"><i class="fas fa-code "></i>Source Code</div>
-                </a>
+      <!-- CONTACT -->
+      <section class="contact py-5 contact-section" id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-12">
+              <div class="contact-form">
+                <h2 class="mb-4" aria-label="Get in touch, pointing down emoji">
+                  <span aria-hidden="true">👇</span> Get in touch
+                </h2>
+                <p class="mb-2 contact-intro">
+                  My inbox is always open. Feel free to reach out with any
+                  questions, or even just to say hi and I'll do my best to get
+                  back in a timely manner.
+                </p>
+
+                <form
+                  method="POST"
+                  action="https://formspree.io/f/mayaqokz"
+                  class="contact-form"
+                  aria-label="Contact form"
+                >
+                  <div class="row">
+                    <div class="col-lg-6 col-12">
+                      <label for="name" class="sr-only">Your Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        placeholder="Your Name"
+                        id="name"
+                        aria-label="Your Name"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                      <label for="email" class="sr-only">Your Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        placeholder="Email"
+                        id="email"
+                        aria-label="Your Email"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-12">
+                      <label for="message" class="sr-only">Your Message</label>
+                      <textarea
+                        name="message"
+                        rows="6"
+                        class="form-control"
+                        id="message"
+                        placeholder="Message"
+                        aria-label="Your Message"
+                        required
+                      ></textarea>
+                    </div>
+
+                    <div class="ml-lg-auto col-lg-5 col-12">
+                      <button type="submit" class="btn submit-btn form-control">
+                        Send!
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
+          <div class="calendly-section">
+            <h2 class="mb-4">Or...</h2>
+            <p class="mb-3">Feel free to schedule a meeting with me below:</p>
+            <a
+              class="un-link calendly-link"
+              href="#"
+              role="button"
+              data-calendly-url="https://calendly.com/anthony-c-berrios?hide_landing_page_details=1"
+              aria-label="Schedule a meeting using Calendly"
+            >
+              Meet with me using Calendly!
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
+    </main>
 
-  <!-- CONTACT -->
-  <section class="contact py-5" id="contact" style="margin-bottom: 10rem;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-12">
-          <div class="contact-form">
-            <h2 class="mb-4">Get in touch👇</h2>
-            <h4 class="mb-2">My inbox is always open. Feel free
-              to reach out with any questions, or even just to say hi and I'll do my best to get back in a timely
-              manner.
-            </h4>
-
-            <form method="POST" action="https://formspree.io/f/mayaqokz" class="contact-form">
-              <div class="row">
-                <div class="col-lg-6 col-12">
-                  <input type="text" class="form-control" name="name" placeholder="Your Name" id="name" required>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                  <input type="email" class="form-control" name="email" placeholder="Email" id="email" required>
-                </div>
-
-                <div class="col-12">
-                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"
-                    required></textarea>
-                </div>
-
-                <div class="ml-lg-auto col-lg-5 col-12">
-                  <input type="submit" class="btn submit-btn form-control" value="Send!" target="_blank">
-                </div>
-              </div>
-            </form>
+    <!-- FOOTER -->
+    <footer class="footer py-3">
+      <div class="container">
+        <div class="row social-row">
+          <div class="col-md-6 offset-md-3">
+            <ul class="social-icons" aria-label="Social media links">
+              <li class="social-list-items">
+                <a
+                  href="https://www.salesforce.com/trailblazer/berriosa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Anthony's Salesforce Trailhead profile"
+                >
+                  <i class="fab fa-salesforce" aria-hidden="true"></i>
+                  <span>Trailhead</span>
+                </a>
+              </li>
+              <li class="social-list-items">
+                <a
+                  href="https://github.com/berriosa13"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Anthony's GitHub profile"
+                >
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                </a>
+              </li>
+              <li class="social-list-items">
+                <a
+                  href="https://www.linkedin.com/in/anthony-berrios-b72148192/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Anthony's LinkedIn profile"
+                >
+                  <i class="fab fa-linkedin" aria-hidden="true"></i>
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+              <li class="social-list-items">
+                <a
+                  href="https://www.instagram.com/ac_berrios/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Anthony's Instagram profile"
+                >
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                  <span>Instagram</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <h2 class="mb-4">Or...</h2>
-      <h4>Feel free to schedule a meeting with me below:</h4>
-      <h2 class="mb-2">
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-        <a class="un-link" style="font-size: 24px;" href=""
-          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/anthony-c-berrios?hide_landing_page_details=1'});return false;">Meet
-          with me using Calendly!</a>
-      </h2>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer py-3">
-    <div class="container">
-      <div class="row social-row">
-        <div class="col-md-6 offset-md-3">
-          <ul class="social-icons">
-            <li class="social-list-items">
-              <a href="https://www.salesforce.com/trailblazer/berriosa" target="_blank" rel="noopener">
-                <i class="fab fa-salesforce" aria-hidden="true"></i>
-                <span>Trailhead</span>
-              </a>
-            </li>
-            <li class="social-list-items">
-              <a href="https://github.com/berriosa13" target="_blank">
-                <i class="fab fa-github" aria-hidden="true"></i>
-                <span>GitHub</span>
-              </a>
-            </li>
-            <li class="social-list-items">
-              <a href="https://www.linkedin.com/in/anthony-berrios-b72148192/" target="_blank">
-                <i class="fab fa-linkedin" aria-hidden="true"></i>
-                <span>LinkedIn</span>
-              </a>
-            </li>
-            <li class="social-list-items">
-              <a href="https://www.instagram.com/ac_berrios/" target="_blank">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-                <span>Instagram</span>
-              </a>
-            </li>
+      <div class="copyright-wrapper">
+        <div class="copyright-content text-center">
+          <p class="copyright-text text-center">
+            <img
+              class="img-fluid mb-2 copyright-logo"
+              src="/images/aberrios-logo-spaced.png"
+              alt="Anthony Berrios Logo"
+              width="200"
+              height="60"
+            />
+            <span class="copyright-notice">
+              &copy; Copyright
+              <span id="copyright" class="copyright-year"></span>
+              <strong>Anthony Berrios</strong> All Rights Reserved.
+            </span>
+          </p>
         </div>
       </div>
-    </div>
 
-    <div class="" style="display: flex; align-items: center; justify-content: center;">
-      <div class="flex-direction: column text-center" style="margin-top: 10rem;">
-        <p class="copyright-text text-center">
-          <img class="img-fluid mb-2" style="margin: 0 auto;" src="/images/aberrios-logo-spaced.png" />
-          &copy; Copyright <span id="copyright">
-            <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-          </span><strong>Anthony Berrios</strong> All Rights Reserved.
-        </p>
+      <div class="arrow-wrapper">
+        <a href="#about" class="arrow-up" aria-label="Scroll to top">
+          <span class="left-arm"></span>
+          <span class="right-arm"></span>
+          <span class="arrow-slide"></span>
+        </a>
       </div>
-    </div>
-    <div class="arrow-wrapper" style="margin-left: auto;">
-      <a href="#" class="arrow-up">
-        <span class="left-arm"></span>
-        <span class="right-arm"></span>
-        <span class="arrow-slide"></span>
-      </a>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/Headroom.js"></script>
-  <script src="js/jQuery.headroom.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/smoothscroll.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="vendor/typed.js/typed.min.js"></script>
-
-</body>
-
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      defer
+    ></script>
+    <script src="js/custom.js" defer></script>
+  </body>
 </html>

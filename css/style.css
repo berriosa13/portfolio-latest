@@ -1,16 +1,55 @@
-@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+/* CSS Custom Properties for Theming */
+:root {
+  --color-dark-bg: #0A192F;
+  --color-light-bg: #f2f2f2;
+  --color-accent: #60E8CF;
+  --color-text-light: #f2f2f2;
+  --color-text-dark: #0A192F;
+  --font-primary: "Quicksand", sans-serif;
+  --transition-speed: 0.3s;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
-  background-color: #0A192F;
-  color: #f2f2f2;
-  font-family: "Quicksand", sans-serif;
+  background-color: var(--color-dark-bg);
+  color: var(--color-text-light);
+  font-family: var(--font-primary);
   padding-top: 70px;
+}
+
+/* Skip to main content link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-accent);
+  color: var(--color-dark-bg);
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 .full-screen {
@@ -96,7 +135,6 @@ strong {
   font-weight: 300;
   display: inline-block;
   vertical-align: top;
-  margin-top: 10px;
   margin-bottom: 25px;
   width: 250px;
   position: relative;
@@ -104,7 +142,7 @@ strong {
 }
 
 .animated-item {
-  color: #60E8CF;
+  color: var(--color-accent);
   font-size: 40px;
   line-height: inherit;
   display: block;
@@ -117,9 +155,184 @@ strong {
   animation: BottomTotop 8s linear infinite;
 }
 
-.animated-item {
-  --animation-delay: calc(var(--index) * 2s);
-  animation-delay: var(--animation-delay);
+/* Individual animation delays for animated items */
+.animated-item-1 {
+  animation-delay: 0s;
+}
+
+.animated-item-2 {
+  animation-delay: 2s;
+}
+
+.animated-item-3 {
+  animation-delay: 4s;
+}
+
+.animated-item-4 {
+  animation-delay: 6s;
+}
+
+/* About section styles */
+.greeting {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.name-heading {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+.animated-text {
+  margin-bottom: 2rem;
+}
+
+.tagline {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Project section styles */
+.project-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Card accessibility - allow keyboard focus on flip cards */
+.card:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.card:focus .front {
+  opacity: 0;
+}
+
+.card:focus .back {
+  opacity: 1;
+}
+
+/* Flipped state for keyboard interaction */
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .front {
+  opacity: 0;
+}
+
+.card.flipped .back {
+  opacity: 1;
+}
+
+/* Image padding classes */
+.image-padded {
+  padding: 1rem;
+  margin-bottom: 100px;
+}
+
+.image-padded-small {
+  padding: 1rem;
+}
+
+/* Experience section - button styles for tabs */
+.list-group-item[role="tab"] {
+  cursor: pointer;
+  border: none;
+  text-align: left;
+}
+
+.list-group-item[role="tab"]:hover {
+  background-color: var(--color-accent);
+  color: var(--color-dark-bg);
+}
+
+.job-description {
+  padding: 20px;
+}
+
+/* Contact section styles */
+.contact-section {
+  margin-bottom: 10rem;
+}
+
+.contact-intro {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.calendly-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.calendly-link {
+  font-size: 24px;
+  display: inline-block;
+}
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Footer copyright styles */
+.copyright-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright-content {
+  margin-top: 10rem;
+}
+
+.copyright-logo {
+  margin: 0 auto;
+}
+
+.copyright-notice {
+  display: block;
+}
+
+.copyright-year {
+  /* Placeholder for JS-inserted year */
+}
+
+/* Dark mode toggle rename */
+.dark-mode-toggle {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Socials section */
+.socials {
+  margin-bottom: 5rem;
+}
+
+.socials .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 /* Define keyframes for BottomTotop animation */
@@ -145,7 +358,7 @@ strong {
 }
 
 .navbar {
-  color: #0A192F !important;
+  color: var(--color-dark-bg) !important;
   position: fixed;
   top: 0;
   right: 0;
@@ -153,6 +366,12 @@ strong {
   z-index: 999999;
   will-change: transform;
   transition: transform 200ms linear;
+}
+
+/* Focus visible styles for better keyboard navigation */
+*:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 .navbar[class*=-unpinned] {
